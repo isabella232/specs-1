@@ -1,4 +1,4 @@
-# 0002 Solving the 'shared data' layer
+# Solving the 'shared data' layer
 
 This proposal introduces a few different concepts:
 

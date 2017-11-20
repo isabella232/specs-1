@@ -1,4 +1,4 @@
-# 0001 Projects and Workspaces
+# Projects and Workspaces
 
 We decided to make a change to the staging area which will reduce a bit of complexity. We hope that the end result won't feel shockingly different, but like a nicer version of what you had.
 
