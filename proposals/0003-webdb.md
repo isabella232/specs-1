@@ -1,8 +1,8 @@
 # WebDB
 
-WebDB is a proposed toolset for reading and writing semantic objects on the DAT network. It provides the ability to run queries against the data in multiple files, and to generally think in terms of data records instead of files. It's designed to be much easier to use than the DAT files APIs, without actually getting away from the DAT core protocols. In fact, each individual WebDB record is a single JSON file in a DAT archive.
+WebDB is a proposed toolset for reading and writing semantic objects on the Dat network. It provides the ability to run queries against the data in multiple files, and to generally think in terms of data records instead of files. It's designed to be much easier to use than the Dat files APIs, without actually getting away from the Dat core protocols. In fact, each individual WebDB record is a single JSON file in a Dat archive.
 
-WebDB is built with [Ingest](https://github.com/beakerbrowser/ingestdb), which is a crawling indexer that runs on top of the DAT FS. [Watch this video](https://www.youtube.com/watch?v=EUPxAvxWlwQ) for a primer on Ingest (originally called "Injest"). Any application can run its own copy of Ingest on the page, but Beaker includes its own instance of Ingest, and that is WebDB.
+WebDB is built with [Ingest](https://github.com/beakerbrowser/ingestdb), which is a crawling indexer that runs on top of the Dat FS. [Watch this video](https://www.youtube.com/watch?v=EUPxAvxWlwQ) for a primer on Ingest (originally called "Injest"). Any application can run its own copy of Ingest on the page, but Beaker includes its own instance of Ingest, and that is WebDB.
 
 WebDB is essentially a set of pre-programmed data types, such as "posts" and "user profiles." It includes type-specific methods for reading, querying, and mutating those data types. The long-term goal is to provide a suite of types which can cover many different applications. 0.8 will have a few starting types, and we will expand that set with each release of Beaker.
 
@@ -50,7 +50,7 @@ In practice, WebDB identifies data by their paths in a dat. Timeline posts, for 
 
 ### 3. Improving app performance and reliability
 
-The DAT FS is a relatively low-level API for building modern applications. Though devs may often fantasize about only needing the FS for their work, the reality is that for most non-trivial apps, you'll need to run queries across multiple data points. Accomplishing that with files will require loading each possible file into memory, and then scanning each file for relevant information. If the files get large, this could involve a lot of memory and long disk reads. And, the reality is, this process is exactly what a database is designed to accomplish -- and so WebDB simply solves that process once for everybody.
+The Dat FS is a relatively low-level API for building modern applications. Though devs may often fantasize about only needing the FS for their work, the reality is that for most non-trivial apps, you'll need to run queries across multiple data points. Accomplishing that with files will require loading each possible file into memory, and then scanning each file for relevant information. If the files get large, this could involve a lot of memory and long disk reads. And, the reality is, this process is exactly what a database is designed to accomplish -- and so WebDB simply solves that process once for everybody.
 
 There are other subtle challenges which WebDB solves. Timestamps, for instance, can't be trusted in a global network, and WebDB can provide sensible solutions for handling order. WebDB also breaks records into multiple files which it can selectively replicate, which improves load performance noticeably compared to single large files.
 
@@ -309,12 +309,12 @@ Likewise, we may be able to find a spec-format which configures Ingest, and ther
 
 Therefore our solution is to let WebDB in 0.8 be highly opinionated. It includes decisions which we think will cover many use cases, and which we think we can make sufficiently general and/or sophisticated to cover a lot more. (In fact, we want feedback and suggestions for how we can develop the API.) Over time, as Beaker gains more a sophisticated process model, we will look for ways to move WebDB entirely into userland.
 
-## The three layers of abstraction: WebDB, Ingest, and the DAT FS
+## The three layers of abstraction: WebDB, Ingest, and the Dat FS
 
-If you're looking for something different than what WebDB gives you, you have two other options: you can use [Ingest](https://github.com/beakerbrowser/ingestdb) directly in your application, or you can use the DAT FS directly. This creates our 3 layers of abstraction: WebDB, Ingest, and DAT.
+If you're looking for something different than what WebDB gives you, you have two other options: you can use [Ingest](https://github.com/beakerbrowser/ingestdb) directly in your application, or you can use the Dat FS directly. This creates our 3 layers of abstraction: WebDB, Ingest, and Dat.
 
 Ingest can be imported into both nodejs and Beaker web apps. In nodejs, it uses leveldb as its backing store; in Beaker, it uses indexeddb.
 
 Using Ingest as a module requires more work as a developer, and loses some of the advantages of WebDB. Your index is no longer shared between applications, so it has to be populated at load time. There's no fine-grained way to define access-permissions to your data either; another app will just have to ask for read/write access to the Dat's files, and then construct its own Ingest instance with a similar data schema as yours. There is also more questions about inter-application compatibility.
 
-However, if you use Ingest or the DAT FS directly, you will be able to customize your data schemas completely. Since WebDB cannot possibly cover all use cases, this may be a good reason to use Ingest or DAT.
+However, if you use Ingest or the Dat FS directly, you will be able to customize your data schemas completely. Since WebDB cannot possibly cover all use cases, this may be a good reason to use Ingest or Dat.

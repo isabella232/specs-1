@@ -13,15 +13,15 @@ Our goal is to create an ecosystem that users control. That means we want apps i
 
 One important part of this will be separating data from the application code. Rotonde is awesome, and it made a really sensible choice given the current tooling, which is to have each user fork the app code and then write their data to the app dat. We call that the "self-mutating dat" pattern, because it saves data by mutating (writing to) its own dat. It's a pattern we'll always keep, but it does bundle the user data with a specific application, and that's not always ideal. So, we wanted a solution for storing user data separately from applications.
 
-## The common data layer, DAT
+## The common data layer, Dat
 
-At the most basic level, DAT acts as the common data layer. If you have an application that edits files, like a text or photo editor, you simply use the `DatArchive.selectArchive` API to ask the user "which dat do you want to edit?" (We might need to add a `DatArchive.selectFile` modal as well, to select individual files and folders, but we haven't done that for 0.8.)
+At the most basic level, Dat acts as the common data layer. If you have an application that edits files, like a text or photo editor, you simply use the `DatArchive.selectArchive` API to ask the user "which dat do you want to edit?" (We might need to add a `DatArchive.selectFile` modal as well, to select individual files and folders, but we haven't done that for 0.8.)
 
-So: the DAT filesystem (FS) is the bottom-most abstraction for data.
+So: the Dat filesystem (FS) is the bottom-most abstraction for data.
 
-## DAT archives and archive types
+## Dat archives and archive types
 
-Within the DAT FS, there is the concept of "archives." Archives are basically a bundle of files, and, when browsing, they map very cleanly to the concept of a site. So, as a shorthand, you could think of 'archive' as == to 'site.' (Also, for what it's worth, we often just call archives "dats.")
+Within the Dat FS, there is the concept of "archives." Archives are basically a bundle of files, and, when browsing, they map very cleanly to the concept of a site. So, as a shorthand, you could think of 'archive' as == to 'site.' (Also, for what it's worth, we often just call archives "dats.")
 
 In 0.8, we want to start toying with the idea of "archive types." This would be a way to specify the role, and perhaps even the contents, of a given dat. The way we chose to implement this is by adding a new `type` field to the dat.json, which can have a string or array of strings specifying the type. Here's an example:
 

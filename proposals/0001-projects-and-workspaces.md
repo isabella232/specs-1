@@ -29,7 +29,7 @@ So, dats no longer have any staging area built in. We're back to square one.
 
 From there, we added a replacement concept called "Projects."
 
-Why call it Projects? Well, the use case we're solving is specifically developers building sites and apps. That's the only time where we feel it's vital to have a direct connection to the OS filesystem, because you need your editor, build tooling, etc. to modify the files. In every other case, dats will contain user data, and the flow is better served by explicitly "exporting" and "importing" the files from/to the DAT filesystem
+Why call it Projects? Well, the use case we're solving is specifically developers building sites and apps. That's the only time where we feel it's vital to have a direct connection to the OS filesystem, because you need your editor, build tooling, etc. to modify the files. In every other case, dats will contain user data, and the flow is better served by explicitly "exporting" and "importing" the files from/to the Dat filesystem
 
 So with Projects, when you want to create a site or app, you can use Beaker's built-in menus to "Create a website" or "Create an app," and that will create a new Project for you. Projects are for dats that you're actively working on. In addition to creating a Project for a new website or app, you can point a new Project to an existing dat.
 
