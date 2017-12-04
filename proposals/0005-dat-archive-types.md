@@ -1,12 +1,12 @@
 # Dat archive types
 
-Within the Dat FS, there is the concept of "archives." Archives are a bundle of files and directories, and, in the context of a Web browser, they map very cleanly to the concept of a site.
+In the Dat filesystem, an archive is a bundle of files and directories, and in the context of a Web browser, the concept of a Dat archive maps cleanly to the concept of a website. However, there are many other potential use cases for Dat archives on the Web. 
 
-In this proposal, we introduce the concept of "archive types." Types are a way to specify the role and possibly contents of a given Dat archive. Because types carry special meaning to the browser and can change core behaviors, they may only be changed by software with elevated permissions (ie the browser).
+In this proposal, we introduce the concept of "archive types." Types are a way to specify the role and possibly contents of a given Dat archive. Because types carry special meaning to the browser and can change core behaviors, they may only be changed by software with elevated permissions (the browser).
 
 ## The `type` field
 
-The archive type is indicated with a new `type` field to the dat.json, which can have a string or array of strings which indicate the type. Here's an example:
+The archive type is indicated with a new `type` field to in `dat.json`, which can be either a string or array of strings which indicate the type:
 
 ```js
 {
@@ -15,11 +15,11 @@ The archive type is indicated with a new `type` field to the dat.json, which can
 }
 ```
 
-An archive can have multiple types. The available values should be determined by further proposals, and we will document some types in this proposal.
+An archive can have multiple types. The available values should be determined by further proposals, but we will document some types in this proposal.
 
-## Reading
+## Reading `type`
 
-The `type` may be read from `archive.getInfo()`:
+The `type` may be read by using [`archive.getInfo()`](https://beakerbrowser.com/docs/apis/dat.html#getinfo):
 
 ```js
 console.log(await bob.getInfo())
@@ -30,7 +30,7 @@ console.log(await bob.getInfo())
 }
 ```
 
-## Modifying
+## Modifying `type`
 
 Types may only be modified by the browser or by applications with elevated permissions (if supported by the browser). This is to protect users from accidental or malicious modification of archive roles. For instance, if an application could remove the `'user'` type from an archive, it could seemingly remove the user's profiles from login prompts.
 
