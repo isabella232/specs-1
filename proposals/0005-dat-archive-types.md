@@ -1,8 +1,10 @@
 # Dat archive types
 
-Within the Dat FS, there is the concept of "archives." Archives are basically a bundle of files, and, when browsing, they map very cleanly to the concept of a site. So, as a shorthand, you could think of 'archive' as == to 'site.' (Also, for what it's worth, we often just call archives "dats.")
+Within the Dat FS, there is the concept of "archives." Archives are a bundle of files and directories, and, in the context of a Web browser, they map very cleanly to the concept of a site.
 
-In this proposal, we introduce the concept of "archive types." Types are a way to specify the role, contents, and/or data formats of a given Dat archive.
+In this proposal, we introduce the concept of "archive types." Types are a way to specify the role and possibly contents of a given Dat archive.
+
+## The `type` field
 
 The archive type is indicated with a new `type` field to the dat.json, which can have a string or array of strings which indicate the type. Here's an example:
 
@@ -13,23 +15,9 @@ The archive type is indicated with a new `type` field to the dat.json, which can
 }
 ```
 
-An archive can have multiple types. The meaning of the types is conventional and should be determined by applications, though we will document some uses in this proposal.
+An archive can have multiple types. The available values should be determined by further proposals, and we will document some types in this proposal.
 
-## Reading and modifying
-
-The `type` may be set as parameters in `DatArchive.create()`, `DatArchive.fork()`, or `archive.configure()`.
-
-```js
-var bob = DatArchive.create({
-  title: 'Bob',
-  type: ['user']
-})
-var alice = DatArchive.fork('dat://alice.com', {
-  title: 'My Alice Fork',
-  type: ['user', 'user-fork']
-})
-await bob.configure({type: ['user', 'my-user-type']})
-```
+## Reading
 
 The `type` may be read from `archive.getInfo()`:
 
@@ -42,9 +30,9 @@ console.log(await bob.getInfo())
 }
 ```
 
-## Permissions
+## Modifying
 
-TODO when can archive types be changed?
+Types may only be modified by the browser or by applications with elevated permissions (if supported by the browser). This is to protect users from accidental or malicious modification of archive roles. For instance, if an application could remove the `'user'` type from an archive, it could seemingly remove the user's profiles from login prompts.
 
 ## Proposed types
 
