@@ -1,5 +1,13 @@
 # WebDB
 
+---
+
+**Status:** Dead
+
+This proposal has been superceded by [0004-simple-user-sessions.md](./0004-simple-user-sessions.md) and [0005-dat-archive-types.md](./0005-dat-archive-types.md).
+
+---
+
 WebDB is a proposed toolset for reading and writing semantic objects on the Dat network. It provides the ability to run queries against the data in multiple files, and to generally think in terms of data records instead of files. It's designed to be much easier to use than the Dat files APIs, without actually getting away from the Dat core protocols. In fact, each individual WebDB record is a single JSON file in a Dat archive.
 
 WebDB is built with [Ingest](https://github.com/beakerbrowser/ingestdb), which is a crawling indexer that runs on top of the Dat FS. [Watch this video](https://www.youtube.com/watch?v=EUPxAvxWlwQ) for a primer on Ingest (originally called "Injest"). Any application can run its own copy of Ingest on the page, but Beaker includes its own instance of Ingest, and that is WebDB.
