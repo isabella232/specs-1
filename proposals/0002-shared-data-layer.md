@@ -4,7 +4,7 @@
 
 **Status:** Dead
 
-This proposal has been superceded by [0004-simple-user-sessions.md](./0004-simple-user-sessions.md) and [0005-dat-archive-types.md](./0005-dat-archive-types.md).
+This proposal has been superceded by [0004-simple-user-sessions](./0004-simple-user-sessions.md) and [0005-dat-archive-types](./0005-dat-archive-types.md).
 
 ---
 
