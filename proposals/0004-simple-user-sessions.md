@@ -1,6 +1,6 @@
 # Simple user sessions
 
-This is a proposal to provide new APIs and UIs for creating sessions with user identities built on Dat. We want to avoid over-prescribing solutions, and so the goal of this proposal is to remain as minimal and simple as possible.
+This is a proposal to provide new APIs and UIs for creating sessions with user identities built on Dat. The goal of this proposal is to remain as minimal and simple as possible.
 
 In the existing Beaker Browser toolset, it is possible to prompt the user to select Dat archives using `DatArchive.selectArchive`. That API could be adapted to act as a kind of login experience (eg "Select the dat you want to login with"). However, we wish to provide users with a clear set of actions and interfaces around user identities. In particular, we think it is important that we:
 
@@ -10,7 +10,7 @@ In the existing Beaker Browser toolset, it is possible to prompt the user to sel
  - Give tools to change the active user dat
  - Provide a nice developer experience
 
-Therefore, in this document we will propose concepts, APIs, and UIs for user dats and user dat sessions.
+Therefore, in this document we will propose a concise set of concepts, APIs, and UIs for user dats and user dat sessions.
 
 ## Concepts
 
@@ -34,7 +34,7 @@ The session has no expiration time, but may be ended by the user through the bro
 
 Applications with an active session may read and write any non-protected file on the user dat. After the session ends, all write permission is revoked.
 
-If an application attempts to write to a user dat without an active session, the user will be given special warning during the permission prompt.
+As with any other Dat archive, an application may request permission to write to a user dat without a user session. The browser should give the user a special warning and confirmation during the permission prompt (eg "This dat is a user profile. Are you sure you want to give write access?").
 
 ## APIs
 
@@ -55,14 +55,14 @@ The URL bar should display an Indicator UI for the active session. This might ex
 
 ### Signin UI
 
-The Signin is a popover or modal. It is triggered by a click on the Indicator. It includes:
+The Signin is a popover or modal. It is triggered by a click on the Indicator, or by the `navigator.session.request()` API. It includes:
 
  - A selectable list of available users
  - A control to create a new user
 
 ### Session Viewer UI
 
-The Session Viewer is a popover. It is triggered by a click on the Indicator, or by the `navigator.session.request()` API. It includes:
+The Session Viewer is a popover. It is triggered by a click on the Indicator. It includes:
 
  - Information about the active session (User name, avatar)
  - Links to view the session's user profile in more detail

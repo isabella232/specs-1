@@ -2,7 +2,7 @@
 
 Within the Dat FS, there is the concept of "archives." Archives are a bundle of files and directories, and, in the context of a Web browser, they map very cleanly to the concept of a site.
 
-In this proposal, we introduce the concept of "archive types." Types are a way to specify the role and possibly contents of a given Dat archive.
+In this proposal, we introduce the concept of "archive types." Types are a way to specify the role and possibly contents of a given Dat archive. Because types carry special meaning to the browser and can change core behaviors, they may only be changed by software with elevated permissions (ie the browser).
 
 ## The `type` field
 
@@ -25,7 +25,7 @@ The `type` may be read from `archive.getInfo()`:
 console.log(await bob.getInfo())
 /* => {
   title: 'Bob',
-  type: ['user', 'my-user-type'],
+  type: ['user'],
   ...
 }
 ```
