@@ -1,16 +1,16 @@
 # Simple user sessions
 
-This is a proposal to provide new APIs and UIs for creating sessions with user identities built on Dat. The goal of this proposal is to remain as minimal and simple as possible.
+This is a proposal to provide APIs and UIs for creating sessions with user identities built on Dat.
 
-In the existing Beaker Browser toolset, it is possible to prompt the user to select Dat archives using `DatArchive.selectArchive`. That API could be adapted to act as a kind of login experience (eg "Select the dat you want to login with"). However, we wish to provide users with a clear set of actions and interfaces around user identities. In particular, we think it is important that we:
+In the existing Beaker Browser toolset, developers can prompt the user to select a Dat archive using [`DatArchive.selectArchive`](https://beakerbrowser.com/docs/apis/dat.html#datarchive-selectarchive). That API *could* be adapted to act as a kind of login experience by prompting the user to select an archive that should represent their profile. However, we wish to provide users with a clear set of actions and interfaces around user identities. In particular, we think it is important to:
 
  - Represent "user dats" as identities
  - Protect access to user dats
- - Indicate which user dat the application is actively using
- - Give tools to change the active user dat
- - Provide a nice developer experience
+ - Indicate in Beaker's core UIs which user dat the application is actively using
+ - Provide tools for the user to change which user dat is tive
+ - Provide a consistent developer experience
 
-Therefore, in this document we will propose a concise set of concepts, APIs, and UIs for user dats and user dat sessions.
+In this document, we'll propose a concise set of concepts, APIs, and UIs for user dats and user dat sessions.
 
 ## Concepts
 
@@ -18,7 +18,7 @@ Therefore, in this document we will propose a concise set of concepts, APIs, and
 
 User dats are Dat archives with the `'user'` type (see [0005-dat-archive-types](./0005-dat-archive-types.md)).
 
-User dats contain all of the content and data which should be attached directly to the user identity. The browser may contain many user dats, and users can freely switch between them within an application (therefore changing the active session).
+User dats contain all of the content and data which should be attached directly to the user identity. The browser may manage many user dats, and users can freely switch between them within an application (therefore changing the active session).
 
 When viewed from the browser's builtin interfaces, a user dat is represented as a user identity. This may include special icons, labels, and categorizations.
 
@@ -26,15 +26,15 @@ When viewed from the browser's builtin interfaces, a user dat is represented as 
 
 User dat sessions are created by the user completing the signin flow. Each session has an ID, which is the URL of the user dat. An application can request a session using `navigator.session.request()`.
 
-#### Lifetime
+#### Session lifetime
 
-The session has no expiration time, but may be ended by the user through the browser UI. An application can end its session using `navigator.session.end()`.
+The session has no expiration time, but the user can end a session using the browser UI. An application can also end its session with `navigator.session.end()`.
 
 #### Permissions
 
 Applications with an active session may read and write any non-protected file on the user dat. After the session ends, all write permission is revoked.
 
-As with any other Dat archive, an application may request permission to write to a user dat without a user session. The browser should give the user a special warning and confirmation during the permission prompt (eg "This dat is a user profile. Are you sure you want to give write access?").
+As with any other Dat archive, an application may request permission to write to a user dat without a user session. The browser should present a special warning and confirmation message within the write-access permission prompt, e.g., "This application is asking for permission to edit your user profile. Are you sure you want to continue?"
 
 ## APIs
 
@@ -42,7 +42,6 @@ To access the signin and session flow for user dats, we propose the `navigator.s
 
 ```js
 navigator.session.id // => the url of the session's dat, or false if no session exists
-navigator.session.isActive // => bool
 await navigator.session.request()
 await navigator.session.end()
 ```
@@ -77,14 +76,14 @@ var profile // user's profile data
 setup()
 
 async function setup () {
-  if (navigator.session.isActive) {
+  // if we already have an active session, fetch profile data 
+  if (navigator.session.id) {
     await getUserData()
   }
   updateUI()
 }
 
 async function getUserData () {
-  // use the webdb session to get the user data
   var archive = new DatArchive(navigator.session.id)
   profile = JSON.parse(await archive.readFile('/profile.json'))
 }
@@ -106,7 +105,7 @@ function updateUI() {
 function renderLogin () {
   // the UI for 'Log in' / 'Change profile'
   return yo`<div class="login">
-    <button onclick=${doLogin}>${navigator.session.isActive ? 'Change profile' : 'Log in'}</button>
+    <button onclick=${doLogin}>${navigator.session.id ? 'Change profile' : 'Log in'}</button>
   </div>`
 }
 
