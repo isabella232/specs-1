@@ -7,7 +7,7 @@ In the existing Beaker Browser toolset, developers can prompt the user to select
  - Represent "user dats" as identities
  - Protect access to user dats
  - Indicate in Beaker's core UIs which user dat the application is actively using
- - Provide tools for the user to change which user dat is tive
+ - Provide tools for the user to change which user dat is live
  - Provide a consistent developer experience
 
 In this document, we'll propose a concise set of concepts, APIs, and UIs for user dats and user dat sessions.
