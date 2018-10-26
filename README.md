@@ -5,21 +5,13 @@ To discuss the content of the spec, open issues and PRs on the relevant repo.
 
 ## Directory
 
-### [Dat identities](https://github.com/beakerbrowser/dat-identities-spec)
-
-A solution for user identity and data management in Beaker.
-
-### [Record protocols](https://github.com/beakerbrowser/record-protocols-spec)
-
-A toolset to manage user data with high level semantics and fine-grained permissions 
-
-### [Dat types](https://github.com/beakerbrowser/dat-types-spec)
-
-Standard dat "type" values and their effects in Beaker.
-
-### [Unwalled.garden record protocol](https://github.com/beakerbrowser/unwalled.garden)
-
-A record protocol for the browser's core applications and behaviors.
+|Spec|Description|
+|-|-|
+|[dat.json](https://github.com/datprotocol/dat.json)|The dat.json standard manifest file.|
+|[Dat types](https://github.com/beakerbrowser/dat-types-spec)|Standard dat "type" values and their effects in Beaker.|
+|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|A solution for user identity and data management in Beaker.|
+|[Record protocols](https://github.com/beakerbrowser/record-protocols-spec)|A toolset to manage user data with high level semantics and fine-grained permissions.|
+|[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|A record protocol for the browser's core applications and behaviors.|
 
 ## TODOs
 
