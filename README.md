@@ -1,19 +1,34 @@
 # Beaker Browser Specs Repo
 
-Repo of specifications, documents, and related discussions.
+Links to specification repos
 
-## Directorories
+## How to
 
-### Proposals ([link](./proposals))
+Every specification has its own repo.
+To discuss the content of the spec, open issues and PRs on the relevant repo.
 
-Proposals are numbered. They are informally structured, but we may add a structure over time. Sometimes, proposals are really just plans by the Beaker core team, which we wanted to explain to the community. Proposals may also come from people outside of the core team, and can cover any aspect of the browser or its technologies.
+## Directory
 
-## How to:
+### [Dat identities](https://github.com/beakerbrowser/dat-identities-spec)
 
-### Add a proposal
+A solution for user identity and data management in Beaker.
 
-Make a PR with the new proposal. Proposals are accepted if we think they have enough merit to be considered broadly. If you want to suggest an idea prior to writing a proposal, you can make an issue.
+### [Record protocols](https://github.com/beakerbrowser/record-protocols-spec)
 
-### Discuss a proposal
+A toolset to manage user data with high level semantics and fine-grained permissions 
 
-Open an issue or PR.
+### [Dat types](https://github.com/beakerbrowser/dat-types-spec)
+
+Standard dat "type" values and their effects in Beaker.
+
+### [Unwalled.garden record protocol](https://github.com/beakerbrowser/unwalled.garden)
+
+A record protocol for the browser's core applications and behaviors.
+
+## TODOs
+
+Specs that need to be written but haven't yet.
+
+ - DatArchive API. Refer to [the documentation](https://beakerbrowser.com/docs/apis/dat) for now.
+ - PeerSockets API. Refer to [the PR](https://github.com/beakerbrowser/beaker-core/pull/6) for now.
+ - DatPubkeyFile API. Refer to [this gist](https://gist.github.com/pfrazee/e4a9d1bdd095564991b5b75a5fe49bd7) for now.
