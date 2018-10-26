@@ -1,9 +1,5 @@
 # Beaker Browser Specs Repo
 
-Links to specification repos
-
-## How to
-
 Every specification has its own repo.
 To discuss the content of the spec, open issues and PRs on the relevant repo.
 
