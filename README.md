@@ -1,4 +1,4 @@
-# Beaker Browser Specs Repo
+# Beaker Browser Specs Directory
 
 Every specification has its own repo.
 To discuss the content of the spec, open issues and PRs on the relevant repo.
