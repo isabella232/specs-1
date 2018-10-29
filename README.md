@@ -5,13 +5,14 @@ To discuss the content of the spec, open issues and PRs on the relevant repo.
 
 ## Directory
 
-|Spec|Description|
-|-|-|
-|[dat.json](https://github.com/datprotocol/dat.json)|The dat.json standard manifest file.|
-|[Dat types](https://github.com/beakerbrowser/dat-types-spec)|Standard dat "type" values and their effects in Beaker.|
-|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|A solution for user identity and data management in Beaker.|
-|[Record protocols](https://github.com/beakerbrowser/record-protocols-spec)|A standard for building interoperable applications on the Web.|
-|[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|A record protocol for Beaker's core applications and behaviors.|
+|Spec|Status|Description|
+|-|-|-|
+|[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file.|
+|[Dat types](https://github.com/beakerbrowser/dat-types-spec)|In progress|Standard dat "type" values and their effects in Beaker.|
+|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|Draft|A solution for user identity and data management in Beaker.|
+|[Beaker FS](https://github.com/beakerbrowser/beaker-fs-spec)|In progress|The filesystem structure for users' personal information.|
+|[Record protocols](https://github.com/beakerbrowser/record-protocols-spec)|Probably dead|A standard for building interoperable applications on the Web.|
+|[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|Not yet started|A record protocol for Beaker's core applications and behaviors.|
 
 ## TODOs
 
