@@ -7,10 +7,11 @@ To discuss the content of the spec, open issues and PRs on the relevant repo.
 
 |Spec|Status|Description|
 |-|-|-|
-|[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file.|
+|[Beaker Filesystem](https://github.com/beakerbrowser/beaker-fs-spec)|In progress|The filesystem for users' personal information.|
+|[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file. Used to describe a dat.|
+|[index.json](https://github.com/beakerbrowser/index-json-spec)|Draft|The index.json folder manifest file. Used to describe a folder.|
 |[Dat types](https://github.com/beakerbrowser/dat-types-spec)|In progress|Standard dat "type" values and their effects in Beaker.|
 |[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|Draft|A solution for user identity and data management in Beaker.|
-|[Beaker User FS](https://github.com/beakerbrowser/beaker-fs-spec)|In progress|The filesystem for users' personal information.|
 |[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|Not yet started|A record protocol for Beaker's core applications and behaviors.|
 
 ## TODOs
