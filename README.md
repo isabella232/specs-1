@@ -7,13 +7,13 @@ To discuss the content of the spec, open issues and PRs on the relevant repo.
 
 |Spec|Status|Description|
 |-|-|-|
-|[Beaker filesystem](https://github.com/beakerbrowser/beaker-fs-spec)|In progress|The filesystem for users' personal information.|
-|[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file. Used to describe a dat.|
-|[index.json](https://github.com/beakerbrowser/index-json-spec)|Draft|The index.json folder manifest file. Used to describe a folder.|
-|[Dat types](https://github.com/beakerbrowser/dat-types-spec)|In progress|Standard dat "type" values and their effects in Beaker.|
-|[Object-store folders](https://github.com/beakerbrowser/object-store-folder-spec)|Draft|Managed folders which help applications share data.|
-|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|Draft|A solution for user identity and data management in Beaker.|
-|[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|Not yet started|A collection of schemas used by Beaker.|
+|[Beaker filesystem](https://github.com/beakerbrowser/beaker-fs-spec)|![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|The filesystem for users' personal information.|
+|[dat.json](https://github.com/datprotocol/dat.json)|![Stable](https://img.shields.io/badge/Draft-Stable-green.svg)![Implemented](https://img.shields.io/badge/Status-Implemented-green.svg)|The dat.json standard manifest file. Used to describe a dat.|
+|[index.json](https://github.com/beakerbrowser/index-json-spec)|![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|The index.json folder manifest file. Used to describe a folder.|
+|[Dat types](https://github.com/beakerbrowser/dat-types-spec)|![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|Standard dat "type" values and their effects in Beaker.|
+|[Object-store folders](https://github.com/beakerbrowser/object-store-folder-spec)|![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|Managed folders which help applications share data.|
+|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|A solution for user identity and data management in Beaker.|
+|[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|![Not written](https://img.shields.io/badge/Draft-Not%20written-red.svg)![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)|A collection of schemas used by Beaker.|
 
 ## TODOs
 
