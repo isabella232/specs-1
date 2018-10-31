@@ -3,7 +3,9 @@
 Every specification has its own repo.
 To discuss the content of the spec, open issues and PRs on the relevant repo.
 
-## Beaker filesystem [&raquo;](https://github.com/beakerbrowser/beaker-fs-spec)
+---
+
+## Beaker filesystem
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -11,7 +13,9 @@ The filesystem for users' personal information.
 
 https://github.com/beakerbrowser/beaker-fs-spec
 
-## dat.json [&raquo;](https://github.com/datprotocol/dat.json)
+---
+
+## dat.json
 
 ![Stable](https://img.shields.io/badge/Draft-Stable-green.svg) ![Implemented](https://img.shields.io/badge/Status-Implemented-green.svg)
 
@@ -19,7 +23,9 @@ The dat.json standard manifest file. Used to describe a dat.
 
 https://github.com/datprotocol/dat.json
 
-## index.json [&raquo;](https://github.com/beakerbrowser/index-json-spec)
+---
+
+## index.json
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -27,7 +33,9 @@ The index.json folder manifest file. Used to describe a folder.
 
 https://github.com/beakerbrowser/index-json-spec
 
-## Dat types [&raquo;](https://github.com/beakerbrowser/dat-types-spec)
+---
+
+## Dat types
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -35,7 +43,9 @@ Standard dat "type" values and their effects in Beaker.
 
 https://github.com/beakerbrowser/dat-types-spec
 
-## Object-store folders [&raquo;](https://github.com/beakerbrowser/object-store-folder-spec)
+---
+
+## Object-store folders
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -43,7 +53,9 @@ Managed folders which help applications share data.
 
 https://github.com/beakerbrowser/object-store-folder-spec
 
-## Dat identities [&raquo;](https://github.com/beakerbrowser/dat-identities-spec)
+---
+
+## Dat identities
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -51,13 +63,17 @@ A solution for user identity and data management in Beaker.
 
 https://github.com/beakerbrowser/dat-identities-spec
 
-## `unwalled.garden` [&raquo;](https://github.com/beakerbrowser/unwalled.garden)
+---
+
+## `unwalled.garden`
 
 ![Not written](https://img.shields.io/badge/Draft-Not%20written-red.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
 A collection of schemas used by Beaker.
 
 https://github.com/beakerbrowser/unwalled.garden
+
+---
 
 ## TODOs
 
