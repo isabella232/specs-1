@@ -8,11 +8,11 @@ To discuss the content of the spec, open issues and PRs on the relevant repo.
 |Spec|Status|Description|
 |-|-|-|
 |[Beaker filesystem](https://github.com/beakerbrowser/beaker-fs-spec)|Draft|The filesystem for users' personal information.|
+|[Beaker user identities](https://github.com/beakerbrowser/beaker-identities-spec)|Draft|APIs and UI flows for user identities.|
 |[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file. Used to describe a dat.|
 |[index.json](https://github.com/beakerbrowser/index-json-spec)|Draft|The index.json folder manifest file. Used to describe a folder.|
 |[Dat types](https://github.com/beakerbrowser/dat-types-spec)|Draft|Standard dat "type" values and their effects in Beaker.|
 |[Object-store folders](https://github.com/beakerbrowser/object-store-folder-spec)|Draft|Managed folders which help applications share data.|
-|[Dat identities](https://github.com/beakerbrowser/dat-identities-spec)|Draft|A solution for user identity and data management in Beaker.|
 |[`unwalled.garden`](https://github.com/beakerbrowser/unwalled.garden)|Not written|A collection of schemas used by Beaker.|
 
 ## TODOs
