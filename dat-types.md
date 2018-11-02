@@ -1,5 +1,7 @@
 # Dat Types Spec
 
+**Last updated:** Nov 2, 2018
+
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
 All dats have one or more "type" values which are specified in the [`dat.json`](https://github.com/datprotocol/dat.json) file. This spec defines the core types which Beaker understands and explains how they are interpretted.
