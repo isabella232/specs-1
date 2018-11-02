@@ -2,13 +2,13 @@
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
-The [Beaker Filesystem Spec](https://github.com/beakerbrowser/beaker-fs-spec) establishes core patterns for file storage and permissioning. It specifies a private/public dat architecture for storing application data.
+The [Beaker Filesystem Spec](./beaker-user-fs.md) establishes core patterns for file storage and permissioning. It specifies a private/public dat architecture for storing application data.
 
 This spec will expand on the public dat as the user's identity and specify the APIs and UI flows for interacting with that identity.
 
 ## Overview
 
-Users in Beaker are represented using dats. Beaker uses two dats to accomplish this: a public dat and a private dat. More information about this architecture can be found in the [Beaker Filesystem Spec](https://github.com/beakerbrowser/beaker-fs-spec).
+Users in Beaker are represented using dats. Beaker uses two dats to accomplish this: a public dat and a private dat. More information about this architecture can be found in the [Beaker Filesystem Spec](./beaker-user-fs.md).
 
 The public dat acts as a public presence (profile) for the user. Its URL is the primary ID of the user. Files written to the public dat are published for the network to consume. Because the public dat is also a website, users can customize their profile dat as a Web presence using HTML, CSS, and JS.
 
@@ -57,13 +57,13 @@ The user's main profile is indicated on the start page in the top-right corner. 
 - **Not created.** A grayed-out user icon is displayed with a label indicating that no profile has been created yet. By clicking on the icon, the user can open a dropdown that prompts the user to create their main profile.
 - **Created.** The user avatar picture is displayed with a label containing the display name. By clicking on the icon, the user can open a dropdown that gives a profile overview and links/buttons to edit or visit the profile.
 
-![Start page mockup](./start-page.jpg)
+![Start page mockup](./images/start-page.jpg)
 
 ### Edit profile flow
 
 Various interfaces include buttons to edit an existing profile. This opens a modal which provides inputs to edit the display name, bio, and avatar image of the profile. The user may save the changes, cancel/close the modal, or delete the profile.
 
-![Edit profile mockup](./edit-profile.jpg)
+![Edit profile mockup](./images/edit-profile.jpg)
 
 ### Sign in flow
 
@@ -72,7 +72,7 @@ Applications gain access to profiles by "signing in." Signin is triggered by [`N
  - **Step 1.** Signin opens a modal with a profile-selector interface. The user may choose from an existing profile, create a new profile, or cancel the flow.
  - **Step 2.** After selecting or creating the profile, the modal switches to the confirmation interface. The confirmation UI shows the permissions which the application is requesting. The user can confirm or go back to the profile selector.
 
-![Signin flow mockup](./browser-signin-flow.jpg)
+![Signin flow mockup](./images/browser-signin-flow.jpg)
 
 ### Current profile session indicator
 
@@ -82,17 +82,17 @@ A site's current session is indicated in the browser UI on the right-hand side o
 - **Signed out.** A grayed-out user icon is displayed. By clicking on the icon, the user can open a dropdown which shows that no session is active and which gives a button to trigger signing.
 - **Active session.** An "active" user icon is displayed.
 
-![Signin state mockup](./browser-signin-state.jpg)
+![Signin state mockup](./images/browser-signin-state.jpg)
 
 By clicking on the icon, the user can open a dropdown which shows the information about the current session's profile. The dropdown includes buttons for changing the profile or for signing out.
 
-![Signed in dropdown mockup](./browser-signed-in-dropdown.jpg)
+![Signed in dropdown mockup](./images/browser-signed-in-dropdown.jpg)
 
 ### Request additional permissions flow
 
 When additional permissions are requested, a modal appears giving the user a chance to grant the request.
 
-![Request additional permissions mockup](./browser-request-additional-perms.jpg)
+![Request additional permissions mockup](./images/browser-request-additional-perms.jpg)
 
 ## NavigatorSession API
 
@@ -182,7 +182,7 @@ The application will be given access to different resources depending on what is
  - `'thumbnail'`  The URL of the user's thumbnail image.
  - `'favicon'`  The URL of the user's favicon image.
  
-The application can request additional resources with the `resources` parameter of the `request()` call. The two supported resource-types are `'public:objects'` and `'private:objects'`, which represent the public and private [object-store folders](https://github.com/beakerbrowser/object-store-folder-spec).
+The application can request additional resources with the `resources` parameter of the `request()` call. The two supported resource-types are `'public:objects'` and `'private:objects'`, which represent the public and private [object-store folders](./object-store-folder.md).
 
 The `'public:objects'` and `'private:objects'` resources are parameterized by their schemas. For example, the "Public Contacts Objects" are identified by two strings: `'public:objects'` and `'dat://walled.garden/contact.schema.json'`.
 
@@ -193,7 +193,7 @@ The access provided to private or public objects by the session depends on the p
  - `'update'` Can update existing files in the objects folder.
  - `'delete'` Can delete existing files in the objects folder.
  
-For more information on how these resources work, see the [Beaker filesystem spec](https://github.com/beakerbrowser/beaker-fs-spec) and the [Object-store folders spec](https://github.com/beakerbrowser/object-store-folder-spec).
+For more information on how these resources work, see the [Beaker filesystem spec](./beaker-user-fs.md) and the [Object-store folders spec](./object-store-folder.md).
 
 ### navigator.session.destroy()
 
