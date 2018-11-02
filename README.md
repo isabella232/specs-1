@@ -6,7 +6,7 @@ Every specification has its own file. To discuss the content of a spec, open iss
 
 |Spec|Status|Description|Last&nbsp;Updated|
 |-|-|-|-|
-|[Beaker&nbsp;filesystem](./beaker-user-fs.md)|Draft|The filesystem for users' personal information.|Nov 2, 2018|
+|[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|Draft|The filesystem for users' personal information.|Nov 2, 2018|
 |[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|Draft|APIs and UI flows for user identities.|Nov 2, 2018|
 |[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file. Used to describe a dat.|April 20, 2018|
 |[index.json](./index-json.md)|Draft|The index.json folder manifest file. Used to describe a folder.|Nov 2, 2018|
