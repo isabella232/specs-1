@@ -23,17 +23,17 @@ Beaker defines the following core dat types:
 
 The dat is a user's private filesystem. In addition to standard dat files (dat.json, favicon.ico) it contains the following standard files:
 
- - `data/` Contains a collection of [object-store folders](https://github.com/beakerbrowser/object-store-folder-spec).
+ - `data/` Contains a collection of [object-store folders](./object-store-folder.md).
  - `public/` A mounted `user-profile` dat.
 
-See the [Beaker User Filesystem spec](https://github.com/beakerbrowser/beaker-fs-spec) for more information.
+See the [Beaker User Filesystem spec](./beaker-user-fs-spec) for more information.
 
 ### `user-profile`
 
 The dat is a public user identity. In addition to standard dat files (dat.json, favicon.ico) it contains the following standard files:
 
  - `thumbnail.(png|jpg|jpeg|gif)` A square image that represents the user (ideally 256x256).
- - `data/` Contains a collection of [object-store folders](https://github.com/beakerbrowser/object-store-folder-spec).
+ - `data/` Contains a collection of [object-store folders](./object-store-folder.md).
 
-See the [Beaker User Filesystem spec](https://github.com/beakerbrowser/beaker-fs-spec) and the [Beaker Identities spec](https://github.com/beakerbrowser/beaker-identities-spec) for more information.
+See the [Beaker User Filesystem spec](./beaker-user-fs.md) and the [Beaker Identities spec](./beaker-identities.md) for more information.
 
