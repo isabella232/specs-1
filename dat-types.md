@@ -26,7 +26,7 @@ The dat is a user's private filesystem. In addition to standard dat files (dat.j
  - `data/` Contains a collection of [object-store folders](./object-store-folder.md).
  - `public/` A mounted `user-profile` dat.
 
-See the [Beaker User Filesystem spec](./beaker-user-fs-spec) for more information.
+See the [Beaker User Filesystem spec](./beaker-user-fs.md) for more information.
 
 ### `user-profile`
 
