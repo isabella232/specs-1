@@ -46,10 +46,6 @@ Users can designate a profile to be their "main" profile. This will be the defau
 
 The user's public dat also doubles as a personal website. This gives users the opportunity to create a unique presence.
 
-#### `web_root` directive
-
-Because the public dat is used to contain application data, there's a risk that applications would accidentally conflict with the user's site assets. We avoid this by setting the `web_root` directive to `site/`. This has the benefit of making it easy for frontend "templates" to be swapped out by replacing the contents of the folder, while reading the user's actual data using the `DatArchive` API.
-
 ## Flows and user interfaces
 
 ### Main profile indicator
