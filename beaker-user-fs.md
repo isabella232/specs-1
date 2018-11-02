@@ -27,10 +27,9 @@ The filestructure has the following properties:
 
 The public dat represents a public identity and contains information that the user wants published (though some of that information may be encrypted). Unlike the private dat, the public dat can be read freely by apps, but they must ask permission to 1) know the URL, and 2) make changes.
 
-The public dat is created with the `type` value of `["user-profile"]` and has `web_root` set to `"/site"`. It will have the following folder structure created automatically:
+The public dat is created with the `type` value of `["user-profile"]`. It will have the following folder structure created automatically:
 
 ```
-site/     - public folder (the website assets)
 data/     - public objectstore
 keys/     - public keystore
 ```
