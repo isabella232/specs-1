@@ -1,5 +1,7 @@
 # Beaker User Filesystem Spec
 
+**Last updated:** Nov 2, 2018
+
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
 Beaker uses the dat network to create a browsable network of Web content. This spec introduces a filesystem structure which manages the user's personal information and mediates access by applications.
