@@ -1,5 +1,7 @@
 # Object-store Folder Spec
 
+**Last updated:** Nov 2, 2018
+
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
 Object-stores are managed folders for storing and publishing application data. They provide users with a clear permissioning system while helping applications enforce schemas.
