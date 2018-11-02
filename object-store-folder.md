@@ -46,20 +46,20 @@ Applications should use the object-store as their primary storage. The apps inte
 
 ### Dat types
 
-Objectstore folders are only recognized on dats with the type [`user-private-fs`](https://github.com/beakerbrowser/dat-types-spec/blob/master/README.md#user-private-fs) and [`user-profile`](https://github.com/beakerbrowser/dat-types-spec/blob/master/README.md#user-profile)
+Objectstore folders are only recognized on dats with the type [`user-private-fs`](./dat-types.md#user-private-fs) and [`user-profile`](./dat-types.md#user-profile)
 
 ### Folder structure
 
-The `data/` folder is created automatically as part of the construction of the [users' private and public dats](https://github.com/beakerbrowser/beaker-fs-spec). It is used to contain object-store folders. It is ["protected"](https://github.com/beakerbrowser/index-json-spec#type) so that only the browser or user can modify it (no apps).
+The `data/` folder is created automatically as part of the construction of the [users' private and public dats](./beaker-user-fs.md). It is used to contain object-store folders. It is ["protected"](./index-json.md#type) so that only the browser or user can modify it (no apps).
 
-The individual object-store are created as-needed during the [`navigator.session.request()`](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsession-api) flow.
+The individual object-store are created as-needed during the [`navigator.session.request()`](./beaker-identities.md#navigatorsession-api) flow.
 
 ```
 data/       - the data container
 data/*/     - the objectstore folders
 ```
 
-Object-store folders are given the type [`"objectstore"`](https://github.com/beakerbrowser/index-json-spec#type). They must have a [`schema`](https://github.com/beakerbrowser/index-json-spec#schema) URL specified.
+Object-store folders are given the type [`"objectstore"`](./index-json.md#type). They must have a [`schema`](./index-json.md#type) URL specified.
 
 **`/data/index.json`**
 
@@ -90,7 +90,7 @@ Objects in the object-store use a [JSON Schema file](https://json-schema.org/) t
 
 The schemas are identified using their URL.
 
-To help visualize how applications use schemas, refer to this example call of [`navigator.session.request()`](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsessionrequestopts):
+To help visualize how applications use schemas, refer to this example call of [`navigator.session.request()`](./beaker-identities.md#navigatorsessionrequestopts):
 
 ```js
 // Request full access to the public fritter posts
@@ -116,7 +116,7 @@ It should be clear from this usage that schemas are used as identifiers for the 
 
 ### Object-store creation
 
-Object-store folders are created as-needed during the [`navigator.session.request()`](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsessionrequestopts) flow. If any of the schemas specified are not yet in use, the browser generates a new objects-folder for the schema. Folder names are generated as "slugified" forms of the schemas' titles.
+Object-store folders are created as-needed during the [`navigator.session.request()`](./beaker-identities.md#navigatorsessionrequestopts) flow. If any of the schemas specified are not yet in use, the browser generates a new objects-folder for the schema. Folder names are generated as "slugified" forms of the schemas' titles.
 
 The `title` and `description` of the JSON Schema file are copied to the object folders when they are created. If no title is present, then a title will be generated from the schema URL. This has an important user-facing function: when asked for permission, the title and description are used to explain to the user what data is being requested.
 
@@ -145,9 +145,9 @@ Then the folder's `index.json` would look like this:
 
 ### Permissions and schema enforcement
 
-The `data/` is ["protected"](https://github.com/beakerbrowser/index-json-spec#type) and can not be modified by applications. On the user's "private dat," the folder may not be read without permission via [`navigator.showFileDialog()`](https://github.com/beakerbrowser/beaker-fs-spec/blob/master/README.md#navigatorshowfiledialog).
+The `data/` is ["protected"](./index-json.md#type) and can not be modified by applications. On the user's "private dat," the folder may not be read without permission via [`navigator.showFileDialog()`](./beaker-user-fs.md#navigatorshowfiledialog).
 
-The [`"objectstore"`](https://github.com/beakerbrowser/index-json-spec#type) folders (at `data/*`) follow the same rules by default: they can not be modified by applications, and they can not be read on the private dat. However, by using [`navigator.session.request()`](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsessionrequestopts) applications can request greater access to the folders.
+The [`"objectstore"`](./index-json.md#type) folders (at `data/*`) follow the same rules by default: they can not be modified by applications, and they can not be read on the private dat. However, by using [`navigator.session.request()`](./beaker-identities.md#navigatorsessionrequestopts) applications can request greater access to the folders.
 
 The object-stores are identified using the following "resource IDs" in the `requestUserSession()` call:
 
@@ -176,8 +176,4 @@ It's recommended that breaking changes are published as separate schema-files at
 
 #### Schema load failures
 
-If a schema fails to load, then the application's [`navigator.session.request()`](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsessionrequestopts) flow will fail with a load error. It's important for application developers to ensure that schemas stay available.
-
-## Notes
-
-This spec supercedes the [Record Protocols Spec](https://github.com/beakerbrowser/record-protocols-spec).
+If a schema fails to load, then the application's [`navigator.session.request()`](./beaker-identities.md#navigatorsessionrequestopts) flow will fail with a load error. It's important for application developers to ensure that schemas stay available.
