@@ -19,7 +19,7 @@ public/   - a mount of the public dat
 
 The filestructure has the following properties:
 
- - The `data/` folder is ["protected"](https://github.com/beakerbrowser/index-json-spec#type) and used by Beaker to contain [object-store folders](https://github.com/beakerbrowser/object-store-folder-spec).
+ - The `data/` folder is ["protected"](./index-json.md#type) and used by Beaker to contain [object-store folders](./object-store-folder.md).
 
 ### Public dat
 
@@ -35,16 +35,16 @@ keys/     - public keystore
 
 The filestructure has the following properties:
 
- - The `data/` folder is ["protected"](https://github.com/beakerbrowser/index-json-spec#type) and used by Beaker to contain [object-store folders](https://github.com/beakerbrowser/object-store-folder-spec).
- - The `keys/` folder is ["protected"](https://github.com/beakerbrowser/index-json-spec#type) and used by Beaker to store cryptographic keys.
+ - The `data/` folder is ["protected"](./index-json.md#type) and used by Beaker to contain [object-store folders](./object-store-folder.md).
+ - The `keys/` folder is ["protected"](./index-json.md#type) and used by Beaker to store cryptographic keys.
 
 ### index.json file
 
-The `index.json` file is a metadata file used to describe each folder. See the [Index.json Spec](https://github.com/beakerbrowser/index-json-spec) for more information.
+The `index.json` file is a metadata file used to describe each folder. See the [Index.json Spec](./index-json.md) for more information.
 
 ### Permissions
 
-By default, applications can't write to folders on the public dat, and can't read or write to folders on the private dat. Applications can gain access to those files and folders using the [`navigator.showFileDialog()`](#navigator-showFileDialog) and [`navigator.session.request()`](#https://github.com/beakerbrowser/beaker-identities-spec#navigatorsession-api) APIs.
+By default, applications can't write to folders on the public dat, and can't read or write to folders on the private dat. Applications can gain access to those files and folders using the [`navigator.showFileDialog()`](#navigator-showFileDialog) and [`navigator.session.request()`](./beaker-identities.md#navigatorsession-api) APIs.
 
 ## APIs
 
@@ -90,7 +90,7 @@ The application will be given the following permissions on the selected target d
 
 ### navigator.session
 
-The `navigator.session` API creates access sessions with multiple resources in the users' FS. This is documented in the [Beaker Identities Spec (`NavigatorSession` API)](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsession-api).
+The `navigator.session` API creates access sessions with multiple resources in the users' FS. This is documented in the [Beaker Identities Spec (`NavigatorSession` API)](./beaker-identities.md#navigatorsession-api).
 
 ## Future features
 
@@ -135,9 +135,3 @@ To
  - Public dat fs
 
 To accomplish this, a future spec could introduce a local filesystem API, and the access APIs such as `navigator.showFileDialog()` could be expanded to select from the local FS.
-
-## Further reading
-
- - [Dat.json spec](https://github.com/datprotocol/dat.json). The `dat.json` file describes a dat.
- - [Index.json spec](https://github.com/beakerbrowser/index-json-spec). The `index.json` file describes a folder.
- - [Object-store folders spec](https://github.com/beakerbrowser/object-store-folder-spec). Object-stores are managed folders for storing and publishing application data.
