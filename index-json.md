@@ -34,7 +34,7 @@ Optional String or Array of Strings. A list of the folder's types. Defaults to `
 |-|-|
 |`none`|Has no meaning. This is the default type if nothing is specified.|
 |`protected`|The folder is protected from applications. Applications are not allowed to write to the folder.|
-|`objectstore`|The folder contains JSON object-files. Applications must request access to the files using the [`navigator.session` API](https://github.com/beakerbrowser/beaker-identities-spec#navigatorsession-api) and are not allowed to create subfolders. The `index.json` must include a `"schema"` field. See [Object-store Folders](https://github.com/beakerbrowser/object-store-folder-spec) for more information.|
+|`objectstore`|The folder contains JSON object-files. Applications must request access to the files using the [`navigator.session` API](./beaker-identities.md#navigatorsession-api) and are not allowed to create subfolders. The `index.json` must include a `"schema"` field. See [Object-store Folders](./object-store-folder.md) for more information.|
 |`keystore`|The folder contains public keys which are used for encryption. Applications must request access using cryptography APIs and are not allowed to write to the folder.|
 
 ### `schema`
