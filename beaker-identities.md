@@ -249,11 +249,14 @@ Emitted when the session is created, destroyed, or when granted resource-permiss
 ### Example login / logout
 
 ```js
-// globals
-var loginErr // error during login
-updateUI()
+// setup
+render()
+navigator.session.addEventListener('changed', e => {
+  // rerender when login/logout happens
+  render()
+})
 
-function updateUI() {
+function render() {
   // main render function
   // we call this function any time the state changes
   yo.update(document.querySelector('main'), yo`
@@ -267,41 +270,23 @@ function updateUI() {
 }
 
 function renderLogin () {
-  // the UI for 'Log in'
-  // renders any login error that might exist
-  // then renders a button to login
   if (navigator.session.active) return '' // already logged in
   return yo`<div class="login">
-    ${loginErr
-      ? yo`<span class="error">${loginErr.toString()}</span>`
-      : ''}
-    <button onclick=${onLogin}>Log in</button>
+    <button onclick=${onClickLogin}>Log in</button>
   </div>`
 }
 
 function renderProfile () {
-  // the ui for the user's profile
-  // renders the configured profile info if active
   if (!navigator.session.active) return '' // not logged in
-
-  // render profile info
   return yo`<div class="profile">
     <img src=${navigator.session.get('thumbnail')}>
     <span>${navigator.session.get('displayName')}</span>
   </div>`
 }
 
-async function onLogin () {
-  // login event handler
-  // attempts a login
-  // saves the error on failure
-  // then renders
-  try {
-    loginErr = null
-    await navigator.session.request()
-  } catch (e) {
-    loginErr = e
-  }
-  updateUI()
+function onClickLogin () {
+  // trigger a login attempt
+  // (we don't need to await this because we're listening for 'changed')
+  navigator.session.request()
 }
 ```
