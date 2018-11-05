@@ -2,20 +2,46 @@
 
 Every specification has its own file. To discuss the content of a spec, open issues and PRs on this repo.
 
+## Getting started
+
+Looking to learn about how Beaker works? Start here:
+
+ - **User data and identity**
+   - [Beaker&nbsp;user&nbsp;identities](./beaker-identities.md). APIs and UI flows for user identities.
+   - [Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md). The filesystem for users' personal information.
+ - **Filesystem APIs**
+   - [Object-store&nbsp;folders](./object-store-folder.md). Managed folders which help applications share data.
+ - **Manifest files and metadata**
+   - [dat.json](https://github.com/datprotocol/dat.json). The dat.json standard manifest file. Used to describe a dat.
+   - [Dat types](./dat-types.md). Standard dat "type" values and their effects in Beaker.
+   - [index.json](./index-json.md). The index.json folder manifest file. Used to describe a folder.
+
 ## Directory
 
-|Spec|Status|Description|Last&nbsp;Updated|
-|-|-|-|-|
-|[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|Draft|The filesystem for users' personal information.|Nov 2, 2018|
-|[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|Draft|APIs and UI flows for user identities.|Nov 2, 2018|
-|[dat.json](https://github.com/datprotocol/dat.json)|Stable|The dat.json standard manifest file. Used to describe a dat.|April 20, 2018|
-|[index.json](./index-json.md)|Draft|The index.json folder manifest file. Used to describe a folder.|Nov 2, 2018|
-|[Dat types](./dat-types.md)|Draft|Standard dat "type" values and their effects in Beaker.|Nov 2, 2018|
-|[Object-store&nbsp;folders](./object-store-folder.md)|Draft|Managed folders which help applications share data.|Nov 2, 2018|
-|`unwalled.garden`|Not&nbsp;written|A collection of schemas used by Beaker.||
-|`DatArchive` API|Not&nbsp;written|Refer to [the documentation](https://beakerbrowser.com/docs/apis/dat) for now.||
-|`PeerSockets` API|Not&nbsp;written|Refer to [the PR](https://github.com/beakerbrowser/beaker-core/pull/6) for now.||
-|`DatPubkeyFile` API|Not&nbsp;written|Refer to [this gist](https://gist.github.com/pfrazee/e4a9d1bdd095564991b5b75a5fe49bd7) for now.||
+### Phase 0 - Proposals Under Consideration
+
+|Spec|Description|Last&nbsp;Updated|
+|-|-|-|
+|`unwalled.garden`|Not yet written. A collection of schemas used by Beaker.||
+|`DatArchive` API|Not yet written. Refer to [the documentation](https://beakerbrowser.com/docs/apis/dat) for now.||
+|`PeerSockets` API|Not yet written. Refer to [the PR](https://github.com/beakerbrowser/beaker-core/pull/6) for now.||
+|`DatPubkeyFile` API|Not yet written. Refer to [this gist](https://gist.github.com/pfrazee/e4a9d1bdd095564991b5b75a5fe49bd7) for now.||
+
+### Phase 1 - Accepted Drafts
+
+|Spec|Description|Last&nbsp;Updated|
+|-|-|-|
+|[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|The filesystem for users' personal information.|Nov 2, 2018|
+|[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|APIs and UI flows for user identities.|Nov 2, 2018|
+|[index.json](./index-json.md)|The index.json folder manifest file. Used to describe a folder.|Nov 2, 2018|
+|[Dat types](./dat-types.md)|Standard dat "type" values and their effects in Beaker.|Nov 2, 2018|
+|[Object-store&nbsp;folders](./object-store-folder.md)|Managed folders which help applications share data.|Nov 2, 2018|
+
+### Phase 2 - Stable
+
+|Spec|Description|Last&nbsp;Updated|
+|-|-|-|
+|[dat.json](https://github.com/datprotocol/dat.json)|The dat.json standard manifest file. Used to describe a dat.|April 20, 2018|
 
 ## Status badges
 
