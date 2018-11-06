@@ -41,12 +41,6 @@ Looking to learn about how Beaker works? Start here:
 |-|-|-|
 |[dat.json](https://github.com/datprotocol/dat.json)|The dat.json standard manifest file. Used to describe a dat.|April 20, 2018|
 
-## Deprecated
-
-|Spec|Description|Last&nbsp;Updated|
-|-|-|-|
-|[index.json](./index-json.md)|The index.json folder manifest file. Used to describe a folder.|Nov 2, 2018|
-
 ## Status badges
 
 ![Not written](https://img.shields.io/badge/Draft-Not%20written-red.svg)
@@ -57,3 +51,7 @@ Looking to learn about how Beaker works? Start here:
 ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 ![Implemented](https://img.shields.io/badge/Status-Implemented-green.svg)
 
+## Deprecated
+
+ - [index.json](./index-json.md)
+ - [Record Protocols](https://github.com/beakerbrowser/record-protocols-spec)
