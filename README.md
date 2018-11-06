@@ -52,7 +52,7 @@ Looking to learn about how Beaker works? Start here:
 ![Not written](https://img.shields.io/badge/Draft-Not%20written-red.svg)
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)
 ![Stable](https://img.shields.io/badge/Draft-Stable-green.svg)
-![Deprecated](https://img.shields.io/badge/Draft-Deprecated-ff69b4.svg)
+![Deprecated](https://img.shields.io/badge/Draft-Deprecated-lightgrey.svg)
 
 ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 ![Implemented](https://img.shields.io/badge/Status-Implemented-green.svg)
