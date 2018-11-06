@@ -41,7 +41,7 @@ Looking to learn about how Beaker works? Start here:
 |-|-|-|
 |[dat.json](https://github.com/datprotocol/dat.json)|The dat.json standard manifest file. Used to describe a dat.|April 20, 2018|
 
-### Deprecated
+## Deprecated
 
 |Spec|Description|Last&nbsp;Updated|
 |-|-|-|
