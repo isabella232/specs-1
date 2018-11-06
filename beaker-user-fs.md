@@ -1,6 +1,6 @@
 # Beaker User Filesystem Spec
 
-**Last updated:** Nov 2, 2018
+**Last updated:** Nov 6, 2018
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -15,13 +15,13 @@ The user filesystem is comprised of two dats called the "Private" and the "Publi
 The private dat is the root of the user's filesystem. It is kept off the network and can only be read by apps with permission. It is created with the `type` value of `["user-private-fs"]` and will have the following folder structure created automatically:
 
 ```
-data/     - private objectstore
-public/   - a mount of the public dat
+data.objs/     - private objectstore
+public/        - a mount of the public dat
 ```
 
 The filestructure has the following properties:
 
- - The `data/` folder is ["protected"](./index-json.md#type) and used by Beaker to contain [object-store folders](./object-store-folder.md).
+ - The `data.objs/` folder is a managed [object-store folder](./object-store-folder.md).
 
 ### Public dat
 
@@ -30,18 +30,14 @@ The public dat represents a public identity and contains information that the us
 The public dat is created with the `type` value of `["user-profile"]`. It will have the following folder structure created automatically:
 
 ```
-data/     - public objectstore
-keys/     - public keystore
+data.objs/     - public objectstore
+user.keys/     - public keystore
 ```
 
 The filestructure has the following properties:
 
- - The `data/` folder is ["protected"](./index-json.md#type) and used by Beaker to contain [object-store folders](./object-store-folder.md).
- - The `keys/` folder is ["protected"](./index-json.md#type) and used by Beaker to store cryptographic keys.
-
-### index.json file
-
-The `index.json` file is a metadata file used to describe each folder. See the [Index.json Spec](./index-json.md) for more information.
+ - The `data.objs/` folder is a managed [object-store folder](./object-store-folder.md).
+ - The `user.keys/` folder is a managed key-store folder.
 
 ### Permissions
 

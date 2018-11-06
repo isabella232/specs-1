@@ -14,7 +14,6 @@ Looking to learn about how Beaker works? Start here:
  - **Manifest files and metadata**
    - [dat.json](https://github.com/datprotocol/dat.json). The dat.json standard manifest file. Used to describe a dat.
    - [Dat types](./dat-types.md). Standard dat "type" values and their effects in Beaker.
-   - [index.json](./index-json.md). The index.json folder manifest file. Used to describe a folder.
 
 ## Directory
 
@@ -31,11 +30,10 @@ Looking to learn about how Beaker works? Start here:
 
 |Spec|Description|Last&nbsp;Updated|
 |-|-|-|
-|[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|The filesystem for users' personal information.|Nov 2, 2018|
+|[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|The filesystem for users' personal information.|Nov 6, 2018|
 |[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|APIs and UI flows for user identities.|Nov 2, 2018|
-|[index.json](./index-json.md)|The index.json folder manifest file. Used to describe a folder.|Nov 2, 2018|
-|[Dat types](./dat-types.md)|Standard dat "type" values and their effects in Beaker.|Nov 2, 2018|
-|[Object-store&nbsp;folders](./object-store-folder.md)|Managed folders which help applications share data.|Nov 2, 2018|
+|[Dat types](./dat-types.md)|Standard dat "type" values and their effects in Beaker.|Nov 6, 2018|
+|[Object-store&nbsp;folders](./object-store-folder.md)|Managed folders which help applications share data.|Nov 6, 2018|
 
 ### Phase 2 - Stable
 
@@ -48,7 +46,12 @@ Looking to learn about how Beaker works? Start here:
 ![Not written](https://img.shields.io/badge/Draft-Not%20written-red.svg)
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg)
 ![Stable](https://img.shields.io/badge/Draft-Stable-green.svg)
+![Deprecated](https://img.shields.io/badge/Draft-Deprecated-lightgrey.svg)
 
 ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 ![Implemented](https://img.shields.io/badge/Status-Implemented-green.svg)
 
+## Deprecated
+
+ - [index.json](./index-json.md)
+ - [Record Protocols](https://github.com/beakerbrowser/record-protocols-spec)

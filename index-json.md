@@ -2,7 +2,13 @@
 
 **Last updated:** Nov 2, 2018
 
-![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
+![Deprecated](https://img.shields.io/badge/Draft-Deprecated-lightgrey.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
+
+---
+
+*Deprecated, replaced by folder extensions. See [#13](https://github.com/beakerbrowser/specs/issues/13) and [#14](https://github.com/beakerbrowser/specs/issues/14) for discussion.*
+
+---
 
 A metadata file used to describe a folder.
 

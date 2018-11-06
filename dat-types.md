@@ -1,6 +1,6 @@
 # Dat Types Spec
 
-**Last updated:** Nov 2, 2018
+**Last updated:** Nov 6, 2018
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -25,7 +25,7 @@ Beaker defines the following core dat types:
 
 The dat is a user's private filesystem. In addition to standard dat files (dat.json, favicon.ico) it contains the following standard files:
 
- - `data/` Contains a collection of [object-store folders](./object-store-folder.md).
+ - `data.objs/` A managed [object-store folder](./object-store-folder.md).
  - `public/` A mounted `user-profile` dat.
 
 See the [Beaker User Filesystem spec](./beaker-user-fs.md) for more information.
@@ -35,7 +35,8 @@ See the [Beaker User Filesystem spec](./beaker-user-fs.md) for more information.
 The dat is a public user identity. In addition to standard dat files (dat.json, favicon.ico) it contains the following standard files:
 
  - `thumbnail.(png|jpg|jpeg|gif)` A square image that represents the user (ideally 256x256).
- - `data/` Contains a collection of [object-store folders](./object-store-folder.md).
+ - `data.objs/` A managed [object-store folder](./object-store-folder.md).
+ - `user.keys/` A managed key-store folder.
 
 See the [Beaker User Filesystem spec](./beaker-user-fs.md) and the [Beaker Identities spec](./beaker-identities.md) for more information.
 
