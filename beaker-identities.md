@@ -1,6 +1,6 @@
 # Beaker User Identities Spec
 
-**Last updated:** Nov 2, 2018
+**Last updated:** Nov 7, 2018
 
 ![Draft](https://img.shields.io/badge/Draft-In%20progress-yellow.svg) ![Not implemented](https://img.shields.io/badge/Status-Not%20implemented-red.svg)
 
@@ -25,7 +25,7 @@ The public dat includes the following standard information:
 |URL|`public`|The user's global ID.|
 |dat.json `title`|`displayName`|The user's display name.|
 |dat.json `description`|`bio`|A short user bio.|
-|/favicon.(ico\|png)|`favicon`|A square icon that represents the user (ideally 32x32 or 64x64).|
+|/favicon.(ico\|png)|`icon`|A square icon that represents the user (ideally 32x32 or 64x64).|
 |/thumb.(png\|jpg\|jpeg\|gif)|`thumbnail`|A square image that represents the user (ideally 256x256).|
 
 ### Access control
@@ -133,7 +133,7 @@ await navigator.session.request({
 console.log('Name:', navigator.session.get('displayName'))
 console.log('Bio:', navigator.session.get('bio'))
 console.log('Avatar:', navigator.session.getUrl('thumbnail'))
-console.log('Icon:', navigator.session.getUrl('favicon'))
+console.log('Icon:', navigator.session.getUrl('icon'))
 
 // List the public contact object-files
 var pubContactsUrl = navigator.session.getUrl('public:objects', 'dat://walled.garden/contact.schema.json')
@@ -178,7 +178,7 @@ The application will be given access to different resources depending on what is
  - `'displayName'` The user's display name.
  - `'bio'` The user's bio line.
  - `'thumbnail'`  The URL of the user's thumbnail image.
- - `'favicon'`  The URL of the user's favicon image.
+ - `'icon'`  The URL of the user's favicon image.
  
 The application can request additional resources with the `resources` parameter of the `request()` call. The two supported resource-types are `'public:objects'` and `'private:objects'`, which represent the public and private [object-store folders](./object-store-folder.md).
 
@@ -225,7 +225,7 @@ Valid values for `resource` are:
  - `'displayName'` The user's display name.
  - `'bio'` The user's bio line.
  - `'thumbnail'` The URL of the user's thumbnail image.
- - `'favicon'` The URL of the user's favicon image.
+ - `'icon'` The URL of the user's favicon image.
  - `'public:objects'` The URL of a public object-store folder. Requires `schema` to be specified.
  - `'private:objects'` The URL of a private object-store folder. Requires `schema` to be specified.
 
