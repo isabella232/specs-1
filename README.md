@@ -31,7 +31,7 @@ Looking to learn about how Beaker works? Start here:
 |Spec|Description|Last&nbsp;Updated|
 |-|-|-|
 |[Beaker&nbsp;user&nbsp;filesystem](./beaker-user-fs.md)|The filesystem for users' personal information.|Nov 6, 2018|
-|[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|APIs and UI flows for user identities.|Nov 2, 2018|
+|[Beaker&nbsp;user&nbsp;identities](./beaker-identities.md)|APIs and UI flows for user identities.|Nov 7, 2018|
 |[Dat types](./dat-types.md)|Standard dat "type" values and their effects in Beaker.|Nov 6, 2018|
 |[Object-store&nbsp;folders](./object-store-folder.md)|Managed folders which help applications share data.|Nov 6, 2018|
 
